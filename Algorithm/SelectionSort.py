@@ -10,5 +10,6 @@ def selectionSort(arr, updateDisplay):
                 minIdx = j
 
         if minIdx != i:
+            updateDisplay(i, minIdx, True)
             arr[i], arr[minIdx] = arr[minIdx], arr[i]
-            updateDisplay(i, minIdx)        
+            updateDisplay(i, minIdx, True)       

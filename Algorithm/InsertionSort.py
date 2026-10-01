@@ -7,9 +7,14 @@ def insertionSort(arr, updateDisplay):
         j = i-1
 
         while j >= 0 and arr[j] > key:
-            updateDisplay(j, j+1)
+
+            updateDisplay(j, j+1, True)
+
             arr[j+1] = arr[j]
+
+            updateDisplay(j, j+1, True)
+
             j = j-1
 
         arr[j+1] = key
-        updateDisplay(j+1, i)    
+        updateDisplay(j+1, i)
